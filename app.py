@@ -21,7 +21,7 @@ def predict():
     if(output==0):
         return render_template('index.html', prediction_text='You are free from diabetes!'.format(output))
     else:
-        return render_template('index.html', prediction_text='You are probably suffering from diabetes'.format(output))
+        return render_template('index.html', prediction_text='You have a high risk of suffering from diabetes, visit a doctor for better assistance'.format(output))
 
 @app.route('/predict_api',methods=['POST'])
 def predict_api():
